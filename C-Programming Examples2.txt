@@ -1,0 +1,65 @@
+PRINTING N TO 1:-
+WITHOUT 'FOR' LOOP/WITH 'WHILE' LOOP:
+#include <stdio.h>
+int main()
+{
+    int N;
+    scanf("%d", &N);
+    int i = N;
+    while(i > 0)
+        {
+            printf("%d ", i);
+            i--;
+        }
+    return 0;
+}
+
+WITH 'FOR' LOOP/WITHOUT 'WHILE' LOOP:
+#include <stdio.h>
+int main()
+{
+    int N;
+    scanf("%d ", &N);
+    for(int i = N; i > 0; i--)
+        {
+            printf("%d ", i);
+        }
+    return 0;
+}
+
+
+
+PRINTING NUMBERS FROM 'M' TO 'N':-
+#include <stdio.h>
+int main()
+{
+    int M, N;
+    scanf("%d %d", &M, &N);
+    for(int i = M; i <= N; i++)
+        {
+            printf("%d ", i);
+        }
+    return 0;
+}
+
+
+
+PRINTING MULTIPLICATION TABLE FOR GIVEN INTEGER 'N':-
+#include <stdio.h>
+int main()
+{
+    int T;
+    scanf("%d", &T);
+    while(T > 0)
+        {
+            int N;
+            scanf("%d", &N);
+            for(int i = 1; i <= 10; i++)
+                {
+                    printf("%d * %d = %d\n", N, i, N*i);
+                }
+            printf("\n");
+            T--;
+        }
+    return 0;
+}
