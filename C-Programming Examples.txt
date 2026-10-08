@@ -1,0 +1,99 @@
+SENIOR CITIZENSHIP:-
+#include <stdio.h>
+int main()
+{
+    int N;
+    char ch;
+    scanf("%c %d", &ch, &N);
+    if((ch == 'm' || ch == 'M') && N >= 60)
+    {
+        printf("Senior Citizen");
+    }
+    else if((ch == 'f' || ch == 'F') && N >= 58)
+    {
+        printf("Senior Citizen");
+    }
+    else
+    {
+        printf("Not A Senior Citizen");
+    }
+    return 0;
+}
+
+
+
+PROFIT OR LOSS:-
+#include <stdio.h>
+int main()
+{
+    int SP, CP;
+    scanf("%d %d", &CP, &SP);
+    if(SP > CP)
+    {
+        printf("Profit = %d", SP - CP);
+    }
+    else if(CP > SP)
+    {
+        printf("Loss = %d", CP - SP);
+    }
+    else
+    {
+        printf("No Profit, No Loss.");
+    }
+    return 0;
+}
+
+
+
+CHARACTER IS VOWEL OR CONSONANT:-
+#include <stdio.h>
+int main()
+{
+    char ch;
+    scanf("%c", &ch);
+    if(ch == 'a' || ch == 'e' || ch =='i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
+    {
+        printf("VOWEL");
+    }
+    else
+    {
+        printf("CONSONANT");
+    }
+    return 0;
+}
+
+
+
+STUDENT GRADE ANALYZER:-
+#include <stdio.h>
+int main()
+{
+    int M1, M2, M3, Total;
+    float Average, Percentage;
+    scanf("%d %d %d", &M1, &M2, &M3);
+    Total = M1 + M2 + M3;
+    Average = Total / 3.0;
+    Percentage = (Total / 300.0) * 100;
+    printf("Total: %d\nAverage: %.2f\nPercentage: %.2f%\n", Total, Average, Percentage);
+    if(Percentage >= 90)
+    {
+        printf("Grade: A");
+    }
+    else if(Percentage >= 80)
+    {
+        printf("Grade: B");
+    }
+    else if(Percentage >= 70)
+    {
+        printf("Grade: C");
+    }
+    else if(Percentage >= 60)
+    {
+        printf("Grade: D");
+    }
+    else
+    {
+        printf("Grade: E");
+    }
+    return 0;
+}
