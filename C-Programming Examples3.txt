@@ -1,0 +1,139 @@
+SALARY CALCULATOR:-
+#include <stdio.h>
+
+int main()
+{
+    int EmployeeID;
+    float BasicSalary;
+    float HRA, GrossSalary, PF, IncomeTax;
+    float TotalDeductions, NetSalary;
+
+    printf("Enter Employee ID: ");
+    scanf("%d", &EmployeeID);
+
+    printf("Enter Basic Salary: ");
+    scanf("%f", &BasicSalary);
+
+    HRA = BasicSalary * 20 / 100;
+    GrossSalary = BasicSalary + HRA;
+    PF = BasicSalary * 12 / 100;
+    IncomeTax = BasicSalary * 5 / 100;
+    TotalDeductions = PF + IncomeTax;
+    NetSalary = GrossSalary - TotalDeductions;
+
+    printf("\n--- Salary Slip ---\n");
+    printf("Employee ID:      %d\n", EmployeeID);
+    printf("Basic Salary:     %.2f\n", BasicSalary);
+    printf("HRA (20%%):        %.2f\n", HRA);
+    printf("Gross Salary:     %.2f\n", GrossSalary);
+    printf("PF (12%%):         %.2f\n", PF);
+    printf("Income Tax (5%%):  %.2f\n", IncomeTax);
+    printf("Total Deductions: %.2f\n", TotalDeductions);
+    printf("Net Salary:       %.2f\n", NetSalary);
+
+    return 0;
+}
+
+
+IS A PRIME NUMBER?
+#include<stdio.h>
+int main()
+{
+    int T;
+    scanf("%d", &T);
+    while(T--)
+        {
+            int N;
+            scanf("%d", &N);
+            if(N < 2)
+            {
+                printf("false\n");
+            }
+            else
+            {
+                int IsPrime = 1;
+                for(int i = 2; i <= N/ i; i++)
+                    {
+                        if(N % i == 0)
+                        {
+                            IsPrime = 0;
+                            break;
+                        }
+                    }
+                if(IsPrime == 1)
+                {
+                    printf("true\n");
+                }
+                else
+                    printf("false\n");
+            }
+        }
+    return 0;
+}
+
+LEAP YEAR:-
+#include <stdio.h>
+int main()
+{
+    int Y;
+    scanf("%d", &Y);
+    if(Y % 4 == 0 && (Y % 400 == 0 || Y % 100 != 0))
+        printf("LEAP YEAR");
+    else
+        printf("NON LEAP YEAR");
+    return 0;
+}
+
+
+PALINDROME NUMBER:-
+#include <stdio.h>
+int main()
+{
+    int T;
+    scanf("%d", &T);
+    while(T--)
+        {
+            int N, remainder, reverse = 0, original;
+            scanf("%d", &N);
+            original = N;
+            while(N > 0)
+                {
+                    remainder = N % 10;
+                    reverse = reverse * 10 + remainder;
+                    N = N / 10;
+                }
+            if(reverse == original)
+                printf("Yes\n");
+            else
+                printf("No\n");
+        }
+    return 0;
+}
+
+
+FIBONACCI SERIES GENERTOR:-
+#include <stdio.h>
+int main()
+{
+    int T;
+    scanf("%d", &T);
+    while(T--)
+        {
+            int N;
+            scanf("%d", &N);
+            long long int a = 0, b = 1, c;
+            for(int i = 1; i <= N; i++)
+                {
+                    if(i > 1)
+                        printf(" ");
+                
+                    printf("%lld", a);
+                
+                    c = a + b;
+                    a = b;
+                    b = c;
+                }
+            printf("\n");
+        }
+    return 0;
+}
