@@ -1,0 +1,97 @@
+CALCULATE FACTORIAL:-
+#include <stdio.h>
+int main()
+{
+    int N, fact = 1;
+    scanf("%d", &N);
+    for(int i = 1; i <= N; i++)
+        fact = fact * i;
+    printf("%d", fact);
+    return 0;
+}
+
+
+Nth TERM OF AN ARITHMETIC PROGRESSION:-
+#include <stdio.h>
+int main()
+{
+    int T;
+    scanf("%d", &T);
+    while(T--)
+        {
+            int a, d, N, n;
+            scanf("%d %d %d", &a, &d, &N);
+            n = a + (N - 1) * d;
+            printf("%d\n", n);
+        }
+    return 0;
+}
+
+
+COUNT DIGITS IN A NUMBER:-
+#include <stdio.h>
+int main()
+{
+    int T;
+    scanf("%d", &T);
+    while(T--)
+        {
+            long long N;
+            int count = 0;
+            scanf("%lld", &N);
+            if(N==0)
+                count = 1;
+            else
+                while(N > 0)
+                    {
+                        count++;
+                        N = N / 10;
+                    }
+            printf("%lld\n", count);
+        }
+    return 0;
+}
+
+
+SUM OF DIGITS IN A NUMBER:-
+#include <stdio.h>
+int main()
+{
+    int T;
+    scanf("%d", &T);
+    while(T--)
+    {
+        long long N;
+        int sum = 0;
+        scanf("%lld", &N);
+        while(N != 0)
+            {
+                sum = sum + (N % 10);
+                N = N / 10;
+            }
+        printf("%d\n", sum); 
+    }
+    return 0;
+}
+
+
+PRINTING REVERSE OF GIVEN NUMBER:-
+#include <stdio.h>
+int main()
+{
+    int T;
+    scanf("%d", &T);
+    while(T--)
+        {
+            int N, num, rev = 0;
+            scanf("%d", &N);
+            while(N > 0)
+                {
+                    num = N % 10;
+                    rev = rev * 10 + num;
+                    N = N / 10;
+                }
+            printf("%d\n", rev);
+        }
+    return 0;
+}
