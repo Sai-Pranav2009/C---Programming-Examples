@@ -1,0 +1,64 @@
+TEMPERATURE CONVERTOR:-
+#include <stdio.h>
+int main()
+{
+     float Fahrenheit, Celsius;
+
+    printf("Enter temperature in Fahrenheit: ");
+    scanf("%f", &Fahrenheit);
+
+    Celsius = (Fahrenheit - 32) * 5 / 9;
+
+    printf("\n--- Conversion Result ---\n");
+    printf("Fahrenheit: %.2f F\n", Fahrenheit);
+    printf("Celsius: %.2f C\n", Celsius);
+    return 0;
+}
+
+
+DISTANCE CONVERTOR:-
+#include <stdio.h>
+int main()
+{
+    float speed, time, distance;
+    float meters, centimeters, millimeters;
+
+    printf("Enter speed in km/h: ");
+    scanf("%f", &speed);
+
+    printf("Enter time in hours: ");
+    scanf("%f", &time);
+
+    distance = speed * time;
+
+    meters = distance * 1000;
+    centimeters = distance * 100000;
+    millimeters = distance * 1000000;
+
+    printf("\n--- Conversion Results ---\n");
+    printf("Distance in Meters:  %.2f m\n", meters);
+    printf("Distance in Centimeters:  %.2f cm\n", centimeters);
+    printf("Distance in Millimeters:  %.2f mm\n", millimeters);
+    return 0;
+}
+
+
+
+CURRENCY CONVERTOR:-
+#include <stdio.h>
+int main()
+{
+    float Rupee, Dollar, Euro, Pound;
+    printf("Enter Amount in Rupees: ");
+    scanf("%f", &Rupee);
+
+    Dollar = Rupee / 95.42;
+    Euro = Rupee / 110.17;
+    Pound = Rupee / 128.89;
+
+    printf("\n--- Conversion Result ---\n");
+    printf("Amount in Dollars:  %.2f\n", Dollar);
+    printf("Amount in Euros:  %.2f\n", Euro);
+    printf("Amount in Pounds:  %.2f\n", Pound);
+    return 0;
+}
